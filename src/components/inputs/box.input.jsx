@@ -20,16 +20,14 @@ const styles = StyleSheet.create({
 
 function BoxInput({ x, y, number, style }) {
   return (
-    <>
-      <View style={[styles.squaresContainer, style]}>
-        {Array.from({ length: number }, (_, index) => (
-          <View
-            key={index}
-            style={[styles.square, index === 0 ? styles.firstSquare : {}]}
-          />
-        ))}
-      </View>
-    </>
+    <View style={[styles.squaresContainer, style]}>
+      {Array.from({ length: number }, (_, index) => (
+        <View
+          key={index}
+          style={[styles.square, index === 0 ? styles.firstSquare : {}]}
+        />
+      ))}
+    </View>
   );
 }
 
