@@ -2,21 +2,27 @@ import { StyleSheet, Text } from '@react-pdf/renderer';
 import React from 'react';
 import BoxInput from '../inputs/box.input';
 import Column from '../layout/column';
+import Row from '../layout/row';
 import BoldText from '../typography/bold-text.typography';
 
 const styles = StyleSheet.create({
   label: {
-    fontSize: '0.10in',
     alignSelf: 'center',
+    fontFamily: 'SourceSansLight',
   },
 });
 
-function DateInput() {
+function DateInput({ label, style, debug, dateMarginLeft = '.10in' }) {
   return (
-    <>
+    <Row style={style} debug={debug}>
+      {label ? (
+        <Text style={{ fontFamily: 'SourceSansLight' }}>{label}</Text>
+      ) : (
+        <></>
+      )}
       <Column
         style={{
-          marginLeft: '.10in',
+          marginLeft: dateMarginLeft,
         }}
       >
         <BoxInput number={2} />
@@ -32,7 +38,7 @@ function DateInput() {
         <BoxInput number={4} />
         <Text style={styles.label}>year</Text>
       </Column>
-    </>
+    </Row>
   );
 }
 

@@ -2,7 +2,7 @@ import { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 const styles = StyleSheet.create({
   square: {
-    width: 12,
+    minWidth: 12,
     height: 12,
     borderTopWidth: 1,
     borderBottomWidth: 1,

@@ -5,8 +5,8 @@ import BoxInput from './box.input';
 
 const styles = StyleSheet.create({
   label: {
-    fontSize: '0.10in',
     alignSelf: 'center',
+    fontFamily: 'SourceSansLight',
   },
 });
 

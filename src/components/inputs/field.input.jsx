@@ -9,28 +9,27 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   inputField: {
-    width: '1.40in',
-    height: '0.15in',
+    height: '0.17in',
     borderBottomWidth: 0.5,
     borderColor: '#000',
-    marginBottom: '0.06in',
   },
   fieldLabel: {
-    fontSize: '0.10in',
     alignSelf: 'center',
     textAlign: 'center',
+    fontFamily: 'SourceSansLight',
   },
   descriptionText: {
-    marginTop: '0.03in',
-    fontSize: '0.10in',
+    fontFamily: 'SourceSansLight',
+    letterSpacing: -0.5,
+    fontSize: 7.68,
     alignSelf: 'center',
   },
 });
 
-function FieldInput({ label, description, style }) {
+function FieldInput({ label, description, style, width, debug }) {
   return (
-    <Column style={[styles.fieldContaine, style]}>
-      <View style={styles.inputField} />
+    <Column debug={debug} style={[styles.fieldContaine, style]}>
+      <View style={[styles.inputField, { width: width }]} />
       <Text style={styles.fieldLabel}>{label}</Text>
       {description ? (
         <Text style={styles.descriptionText}>{description}</Text>
