@@ -8,7 +8,7 @@ import Row from '../layout/row';
 function MemberConsentAuthorizationInput() {
   return (
     <Row>
-      <Column debug style={{ lineHeight: 0, letterSpacing: '-0.3' }}>
+      <Column style={{ lineHeight: 0, letterSpacing: '-0.3' }}>
         <Text>If member/representative is unable to write,</Text>
         <Text>put right thumbmark. Member/Representative</Text>
         <Text>should be assisted by an HCI representative.</Text>

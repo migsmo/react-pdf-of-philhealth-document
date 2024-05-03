@@ -22,12 +22,10 @@ import PhilHealthPinInput from './components/templates/philhealth-pin.input';
 import BoldText from './components/typography/bold-text.typography';
 import Heading1 from './components/typography/heading-1.typography';
 import SectionDivider from './components/typography/section-divider.typograpgy';
+import Helvetica from './fonts/helvetica/Helvetica.ttf';
 import MinionProBold from './fonts/minion-pro/Minion-Pro-Bold.ttf';
 import MinionProItalic from './fonts/minion-pro/Minion-Pro-Italic.ttf';
 import MinionProRegular from './fonts/minion-pro/MinionPro-Regular.ttf';
-import RobotoBold from './fonts/roboto/Roboto-Bold.ttf';
-import RobotoLight from './fonts/roboto/Roboto-Light.ttf';
-import RobotoThin from './fonts/roboto/Roboto-Thin.ttf';
 import SourceSansBold from './fonts/source-sans/SourceSans3-Bold.ttf';
 import SourceSansLight from './fonts/source-sans/SourceSans3-Light.ttf';
 import SourceSansSemiBoldIt from './fonts/source-sans/SourceSans3-SemiBoldItalic.ttf';
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
   },
 
   part_one_section: {
-    margin: '0.07in',
+    margin: '0.05in',
     marginTop: 0,
     letterSpacing: DEFAULT_LETTER_SPACING,
   },
@@ -108,7 +106,7 @@ const styles = StyleSheet.create({
   },
   part_four_section: {
     letterSpacing: DEFAULT_LETTER_SPACING,
-    marginLeft: '0.07in',
+    marginLeft: '0.05in',
     marginTop: '0.03in',
   },
   part_five_section: {
@@ -117,25 +115,9 @@ const styles = StyleSheet.create({
 });
 
 Font.register({
-  family: 'RobotoLight',
-  src: RobotoLight,
-});
-
-Font.register({
-  family: 'RobotoThin',
-  src: RobotoThin,
-});
-
-Font.register({
-  family: 'RobotoBold',
-  src: RobotoBold,
-});
-
-Font.register({
   family: 'MinionProItalic',
   src: MinionProItalic,
 });
-
 Font.register({
   family: 'MinionProBold',
   src: MinionProBold,
@@ -159,6 +141,11 @@ Font.register({
 Font.register({
   family: 'SourceSansSemiBoldIt',
   src: SourceSansSemiBoldIt,
+});
+
+Font.register({
+  family: 'Helvetica',
+  src: Helvetica,
 });
 
 function App() {
@@ -196,10 +183,33 @@ function App() {
                   <Text style={[styles.minion_regular]}>
                     Citystate Centre 709 Shaw Boulevard, Pasig City
                   </Text>
+                  <Row>
+                    <Text style={[styles.minion_regular]}>
+                      Call Center (02) 441-7442
+                    </Text>
 
-                  <Text style={[styles.minion_regular]}>
-                    Call Center (02) 441-7442 l Trunkline (02) 441-7444
-                  </Text>
+                    <View
+                      style={{
+                        width: '0.20in',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <BoldText
+                        style={{
+                          alignSelf: 'center',
+                          position: 'absolute',
+                          paddingBottom: '0.05in',
+                        }}
+                      >
+                        ·
+                      </BoldText>
+                    </View>
+
+                    <Text style={[styles.minion_regular]}>
+                      Trunkline (02) 441-7444
+                    </Text>
+                  </Row>
+
                   <Text style={[styles.minion_regular]}>
                     www.philhealth.gov.ph
                   </Text>
@@ -442,9 +452,8 @@ function App() {
               <Row>
                 <Heading1>3. Business Name:</Heading1>
                 <FieldInput
-                  debug
                   style={{ marginLeft: '0.33in' }}
-                  width='6.46in'
+                  width='6.33in'
                   label={'Business Name of Employer'}
                 />
               </Row>
@@ -669,7 +678,7 @@ function App() {
                   label={
                     'Signature Over Printed Name of Authorized HCI Representative'
                   }
-                  style={{ marginRight: '0.15in' }}
+                  style={{ marginRight: '0.15in', marginLeft: '0.08in' }}
                 />
                 <FieldInput
                   width={'1.95in'}
@@ -678,6 +687,7 @@ function App() {
                 <DateInput
                   label={'Date Signed'}
                   style={{
+                    marginTop: '0.02in',
                     marginLeft: '0.18in',
                   }}
                 />

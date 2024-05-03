@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   inputField: {
-    height: '0.17in',
+    height: '0.14in',
     borderBottomWidth: 0.5,
     borderColor: '#000',
   },

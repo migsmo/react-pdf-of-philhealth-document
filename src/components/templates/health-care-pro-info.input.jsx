@@ -3,7 +3,7 @@ import React from 'react';
 import BoxInput from '../inputs/box.input';
 import FieldInput from '../inputs/field.input';
 import Row from '../layout/row';
-import BoldText from '../typography/bold-text.typography';
+import Dash from '../typography/dash.typography';
 import DateInput from './date.input';
 
 function HealthCareProInfoInput({ label, style }) {
@@ -25,9 +25,9 @@ function HealthCareProInfoInput({ label, style }) {
           }}
           number={4}
         />
-        <BoldText>-</BoldText>
+        <Dash />
         <BoxInput number={7} />
-        <BoldText>-</BoldText>
+        <Dash />
         <BoxInput number={1} />
       </Row>
       <FieldInput

@@ -1,7 +1,7 @@
 import React from 'react';
 import BoxInput from '../inputs/box.input';
 import Row from '../layout/row';
-import BoldText from '../typography/bold-text.typography';
+import Dash from '../typography/dash.typography';
 import Heading1 from '../typography/heading-1.typography';
 
 function PhilHealthPinInput({ label, style }) {
@@ -22,9 +22,9 @@ function PhilHealthPinInput({ label, style }) {
           }}
           number={2}
         />
-        <BoldText>-</BoldText>
+        <Dash />
         <BoxInput number={9} />
-        <BoldText>-</BoldText>
+        <Dash />
         <BoxInput number={1} />
       </Row>
     </>

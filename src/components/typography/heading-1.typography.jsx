@@ -9,6 +9,7 @@ function Heading1({ children }, style) {
           {
             fontSize: 10,
             fontFamily: 'SourceSansBold',
+            letterSpacing: '0',
           },
           style,
         ]}

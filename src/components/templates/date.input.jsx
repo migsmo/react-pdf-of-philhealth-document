@@ -3,7 +3,7 @@ import React from 'react';
 import BoxInput from '../inputs/box.input';
 import Column from '../layout/column';
 import Row from '../layout/row';
-import BoldText from '../typography/bold-text.typography';
+import Dash from '../typography/dash.typography';
 
 const styles = StyleSheet.create({
   label: {
@@ -28,12 +28,12 @@ function DateInput({ label, style, debug, dateMarginLeft = '.10in' }) {
         <BoxInput number={2} />
         <Text style={styles.label}>month</Text>
       </Column>
-      <BoldText>-</BoldText>\
+      <Dash />
       <Column>
         <BoxInput number={2} />
         <Text style={styles.label}>day</Text>
       </Column>
-      <BoldText>-</BoldText>
+      <Dash />
       <Column>
         <BoxInput number={4} />
         <Text style={styles.label}>year</Text>
