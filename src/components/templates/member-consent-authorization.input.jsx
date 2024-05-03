@@ -8,7 +8,7 @@ import Row from '../layout/row';
 function MemberConsentAuthorizationInput() {
   return (
     <Row>
-      <Column debug style={{ lineHeight: 0 }}>
+      <Column debug style={{ lineHeight: 0, letterSpacing: '-0.3' }}>
         <Text>If member/representative is unable to write,</Text>
         <Text>put right thumbmark. Member/Representative</Text>
         <Text>should be assisted by an HCI representative.</Text>
@@ -25,9 +25,9 @@ function MemberConsentAuthorizationInput() {
       </Column>
       <Column
         style={{
-          marginTop: '0.06in',
+          marginTop: '0.08in',
           marginLeft: 19.44,
-          marginRight: '0.31in',
+          marginRight: '0.29in',
         }}
       >
         <View
@@ -39,7 +39,76 @@ function MemberConsentAuthorizationInput() {
           }}
         />
       </Column>
-      <Column style={{}}>
+      <Column>
+        <Column
+          style={{
+            marginBottom: '0.12in',
+            marginRight: '0.11in',
+          }}
+        >
+          <Text>Relationship of the</Text>
+          <Text>representative to the member</Text>
+        </Column>
+        <Column>
+          <Text>Reason for signing on</Text>
+          <Text>behalf of the member</Text>
+        </Column>
+      </Column>
+      <Column>
+        <Column>
+          <Row>
+            <CheckBoxInput
+              style={{
+                marginRight: '0.09in',
+              }}
+              label={'Spouse'}
+            />
+            <CheckBoxInput
+              style={{
+                marginRight: '0.09in',
+              }}
+              label={'Child'}
+            />
+            <CheckBoxInput label={'Parent'} />
+          </Row>
+          <Row>
+            <CheckBoxInput
+              label={'Sibling'}
+              style={{
+                marginTop: '0.02in',
+                marginRight: '0.12in',
+              }}
+            />
+            <CheckBoxInput
+              label={'Others, Specify '}
+              style={{
+                marginTop: '0.02in',
+              }}
+            />
+            <FieldInput width='1.04in' />
+          </Row>
+        </Column>
+        <Column>
+          <Row>
+            <CheckBoxInput
+              style={{
+                marginTop: '0.02in',
+              }}
+              label={'Patient is incapacitated'}
+            />
+          </Row>
+          <Row>
+            <CheckBoxInput
+              label={'Other reasons: '}
+              style={{
+                marginTop: '0.02in',
+              }}
+            />
+            <FieldInput width={121} />
+          </Row>
+        </Column>
+      </Column>
+      {/* <Column style={{}}>
         <Row
           style={{
             marginBottom: '0.24in',
@@ -110,7 +179,7 @@ function MemberConsentAuthorizationInput() {
             </Row>
           </Column>
         </Row>
-      </Column>
+      </Column> */}
     </Row>
   );
 }

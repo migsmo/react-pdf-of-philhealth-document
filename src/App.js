@@ -31,6 +31,9 @@ import RobotoThin from './fonts/roboto/Roboto-Thin.ttf';
 import SourceSansBold from './fonts/source-sans/SourceSans3-Bold.ttf';
 import SourceSansLight from './fonts/source-sans/SourceSans3-Light.ttf';
 import SourceSansSemiBoldIt from './fonts/source-sans/SourceSans3-SemiBoldItalic.ttf';
+
+const DEFAULT_LETTER_SPACING = '-0.35';
+
 const styles = StyleSheet.create({
   page: {
     maxWidth: '100%',
@@ -94,11 +97,23 @@ const styles = StyleSheet.create({
   part_one_section: {
     margin: '0.07in',
     marginTop: 0,
+    letterSpacing: DEFAULT_LETTER_SPACING,
   },
   part_two_section: {
     margin: 3.6,
+    letterSpacing: DEFAULT_LETTER_SPACING,
   },
-  part_three_section: {},
+  part_three_section: {
+    letterSpacing: DEFAULT_LETTER_SPACING,
+  },
+  part_four_section: {
+    letterSpacing: DEFAULT_LETTER_SPACING,
+    marginLeft: '0.07in',
+    marginTop: '0.03in',
+  },
+  part_five_section: {
+    letterSpacing: DEFAULT_LETTER_SPACING,
+  },
 });
 
 Font.register({
@@ -578,12 +593,7 @@ function App() {
               text={'PART IV - HEALTH CARE PROFESSIONAL INFORMATION'}
             />
 
-            <View
-              style={{
-                marginLeft: '0.07in',
-                marginTop: '0.03in',
-              }}
-            >
+            <View style={styles.part_four_section}>
               <HealthCareProInfoInput label='Accreditation No.' />
               <HealthCareProInfoInput label='Accreditation No.' />
               <HealthCareProInfoInput label='Accreditation No.' />
@@ -591,86 +601,88 @@ function App() {
             <SectionDivider
               text={'PART V - PROVIDER INFORMATION AND CERTIFICATION'}
             />
-            <Row
-              style={{
-                alignItems: 'center',
-                marginLeft: '0.08in',
-                marginRight: '0.08in',
-              }}
-            >
-              <Heading1>1. PhilHealth Benefits:</Heading1>
-              <Text
-                style={{
-                  fontFamily: 'SourceSansBold',
-                  marginLeft: '0.38in',
-                  marginRight: '0.17in',
-                }}
-              >
-                ICD 10 or RVS Code:
-              </Text>
+            <View style={styles.part_five_section}>
               <Row
                 style={{
-                  marginRight: '0.15in',
+                  alignItems: 'center',
+                  marginLeft: '0.08in',
+                  marginRight: '0.08in',
                 }}
               >
+                <Heading1>1. PhilHealth Benefits:</Heading1>
                 <Text
                   style={{
-                    marginRight: '0.07in',
+                    fontFamily: 'SourceSansBold',
+                    marginLeft: '0.38in',
+                    marginRight: '0.17in',
                   }}
                 >
-                  1. First Case Rate
+                  ICD 10 or RVS Code:
                 </Text>
-                <FieldInput width='1.44in' />
+                <Row
+                  style={{
+                    marginRight: '0.15in',
+                  }}
+                >
+                  <Text
+                    style={{
+                      marginRight: '0.07in',
+                    }}
+                  >
+                    1. First Case Rate
+                  </Text>
+                  <FieldInput width='1.44in' />
+                </Row>
+                <Row>
+                  <Text
+                    style={{
+                      marginRight: '0.07in',
+                    }}
+                  >
+                    2. Second Case Rate
+                  </Text>
+                  <FieldInput width='1.72in' />
+                </Row>
               </Row>
-              <Row>
-                <Text
+              <Column style={{ width: '100%' }}>
+                <Column
                   style={{
-                    marginRight: '0.07in',
+                    fontFamily: 'SourceSansSemiBoldIt',
+                    fontSize: 8.64,
+                    letterSpacing: -0.35,
                   }}
                 >
-                  2. Second Case Rate
-                </Text>
-                <FieldInput width='1.72in' />
-              </Row>
-            </Row>
-            <Column style={{ width: '100%' }}>
-              <Column
-                style={{
-                  fontFamily: 'SourceSansSemiBoldIt',
-                  fontSize: 8.64,
-                  letterSpacing: -0.35,
-                }}
-              >
-                <Text
-                  style={{
-                    textAlign: 'center',
-                  }}
-                >
-                  I certify that services rendered were recorded in the
-                  patient’s chart and health care institution records and that
-                  the herein information given are true and correct.
-                </Text>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                    }}
+                  >
+                    I certify that services rendered were recorded in the
+                    patient’s chart and health care institution records and that
+                    the herein information given are true and correct.
+                  </Text>
+                </Column>
               </Column>
-            </Column>
-            <Row>
-              <FieldInput
-                width={'3.29in'}
-                label={
-                  'Signature Over Printed Name of Authorized HCI Representative'
-                }
-                style={{ marginRight: '0.15in' }}
-              />
-              <FieldInput
-                width={'1.95in'}
-                label={'Official Capacity/Designation'}
-              />
-              <DateInput
-                label={'Date Signed'}
-                style={{
-                  marginLeft: '0.18in',
-                }}
-              />
-            </Row>
+              <Row>
+                <FieldInput
+                  width={'3.29in'}
+                  label={
+                    'Signature Over Printed Name of Authorized HCI Representative'
+                  }
+                  style={{ marginRight: '0.15in' }}
+                />
+                <FieldInput
+                  width={'1.95in'}
+                  label={'Official Capacity/Designation'}
+                />
+                <DateInput
+                  label={'Date Signed'}
+                  style={{
+                    marginLeft: '0.18in',
+                  }}
+                />
+              </Row>
+            </View>
           </View>
         </Page>
       </Document>
