@@ -4,7 +4,7 @@ import React from 'react';
 const BoldText = ({
   children,
   style,
-  fontSize = 12,
+  fontSize,
   fontFamily = 'SourceSansBold',
 }) => (
   <Text style={[{ fontFamily: fontFamily, fontSize: fontSize }, style]}>
