@@ -1,12 +1,12 @@
 import { Text } from '@react-pdf/renderer';
 import React from 'react';
 import BoxInput from '../inputs/box.input';
+import DateInput from '../inputs/date.input';
 import FieldInput from '../inputs/field.input';
 import Row from '../layout/row';
 import Dash from '../typography/dash.typography';
-import DateInput from './date.input';
 
-function HealthCareProInfoInput({ label, style }) {
+function HealthCareProInfoPart({ label, style }) {
   return (
     <Row>
       <Row
@@ -40,4 +40,4 @@ function HealthCareProInfoInput({ label, style }) {
   );
 }
 
-export default HealthCareProInfoInput;
+export default HealthCareProInfoPart;
