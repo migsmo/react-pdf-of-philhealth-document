@@ -20,10 +20,11 @@ function SectionDivider({ text, description }) {
         <Text
           style={{
             fontFamily: 'SourceSansLight',
-            fontSize: 9.6,
+            fontSize: 8.64,
             marginLeft: '0.12in',
             alignSelf: 'flex-end',
             bottom: 1,
+            letterSpacing: -0.35,
           }}
         >
           {description}
