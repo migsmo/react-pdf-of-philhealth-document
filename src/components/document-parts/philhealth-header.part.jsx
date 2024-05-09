@@ -44,6 +44,7 @@ function PhilHealthHeaderPart({ style }) {
               alignSelf: 'center',
               position: 'absolute',
               paddingBottom: '0.05in',
+              fontSize: 16,
             }}
           >
             ·
