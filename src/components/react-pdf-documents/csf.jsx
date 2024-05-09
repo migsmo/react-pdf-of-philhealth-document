@@ -513,7 +513,7 @@ function CSF() {
                 margin: 3.6,
               }}
             >
-              <MemberConsentAuthorizationPart />
+              <MemberConsentAuthorizationPart isPatient />
             </Row>
           </View>
 
