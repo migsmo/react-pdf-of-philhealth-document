@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSansLight',
   },
   bottom_header: {
+    marginTop: '0.05in',
     marginLeft: '0.07in',
     letterSpacing: DEFAULT_LETTER_SPACING,
   },
@@ -212,7 +213,11 @@ function CF1() {
           </Column>
           <SectionDivider text={'PART I - MEMBER INFORMATION'} />
           <Column style={styles.part_one_section}>
-            <Row>
+            <Row
+              style={{
+                marginTop: '0.03in',
+              }}
+            >
               <PhilHealthPinPart
                 style={{
                   alignItems: 'center',
@@ -230,10 +235,14 @@ function CF1() {
                 <DateInput />
               </Column>
             </Row>
-            <Row>
+            <Row
+              style={{
+                marginTop: '0.05in',
+              }}
+            >
               <Column>
                 <Row>
-                  <Heading1 style={{ marginRight: '4.80in' }}>
+                  <Heading1 style={{ marginRight: '4.79in' }}>
                     4. Mailing Address:
                   </Heading1>
                   <Heading1
@@ -251,7 +260,11 @@ function CF1() {
                   />
                   <CheckBoxInput label={'Female'} />
                 </Row>
-                <Row>
+                <Row
+                  style={{
+                    marginTop: '0.03',
+                  }}
+                >
                   <FieldInput
                     label='Unit/Room No./Floor'
                     style={{ marginRight: '0.16in' }}
@@ -274,7 +287,11 @@ function CF1() {
                   />
                   <FieldInput label='Subdivision/Village' width='1.91in' />
                 </Row>
-                <Row>
+                <Row
+                  style={{
+                    marginTop: '0.07',
+                  }}
+                >
                   <FieldInput
                     label='Barangay'
                     style={{ marginRight: '0.16in' }}
@@ -299,7 +316,11 @@ function CF1() {
                 </Row>
               </Column>
             </Row>
-            <Row>
+            <Row
+              style={{
+                marginTop: '0.10in',
+              }}
+            >
               <Column>
                 <Heading1>6. Contact Information:</Heading1>
                 <Row>
@@ -320,6 +341,7 @@ function CF1() {
             <Row
               style={{
                 alignItems: 'center',
+                marginTop: '0.10in',
               }}
             >
               <Heading1 style={{ marginRight: '0.08in' }}>
@@ -344,6 +366,7 @@ function CF1() {
             <Row>
               <PhilHealthPinPart
                 style={{
+                  marginTop: '0.03in',
                   alignItems: 'center',
                 }}
                 label={
@@ -362,22 +385,45 @@ function CF1() {
               </Column>
             </Row>
             <Row>
-              <Heading1 style={{ marginRight: '0.08in' }}>
-                4. Relationship to Member:
-              </Heading1>
-              <CheckBoxInput
-                label={'Child'}
+              <Row
                 style={{
-                  marginRight: '0.05in',
+                  marginRight: '2.61in',
                 }}
-              />
-              <CheckBoxInput
-                label={'Parent'}
-                style={{
-                  marginRight: '0.05in',
-                }}
-              />
-              <CheckBoxInput label={'Spouse'} />
+              >
+                <Heading1 style={{ marginRight: '0.08in' }}>
+                  4. Relationship to Member:
+                </Heading1>
+                <CheckBoxInput
+                  label={'Child'}
+                  style={{
+                    marginRight: '0.05in',
+                  }}
+                />
+                <CheckBoxInput
+                  label={'Parent'}
+                  style={{
+                    marginRight: '0.05in',
+                  }}
+                />
+                <CheckBoxInput label={'Spouse'} />
+              </Row>
+
+              <Row>
+                <Heading1
+                  style={{
+                    marginRight: '0.07in',
+                  }}
+                >
+                  5. Sex:
+                </Heading1>
+                <CheckBoxInput
+                  label={'Male'}
+                  style={{
+                    marginRight: '0.05in',
+                  }}
+                />
+                <CheckBoxInput label={'Female'} />
+              </Row>
             </Row>
           </Column>
           <SectionDivider text={'PART III - MEMBER CERTIFICATION'} />
@@ -400,6 +446,7 @@ function CF1() {
             <Row
               style={{
                 marginLeft: '0.55in',
+                marginBottom: '0.08in',
               }}
             >
               <Column
@@ -432,6 +479,7 @@ function CF1() {
             <Row
               style={{
                 marginLeft: '0.07in',
+                marginBottom: '0.03in',
               }}
             >
               <MemberConsentAuthorizationPart />
@@ -455,7 +503,7 @@ function CF1() {
                 <Row>
                   <PhilHealthPinPart
                     label={'1. PhilHealth Employer Number (PEN):'}
-                    style={{ marginRight: '0.51in' }}
+                    style={{ marginRight: '0.51in', marginTop: '0.05in' }}
                   />
                   <Heading1>2. Contact No.:</Heading1>
                   <FieldInput width='1.72in' />
