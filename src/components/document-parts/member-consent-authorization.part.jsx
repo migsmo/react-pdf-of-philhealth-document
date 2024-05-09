@@ -5,7 +5,9 @@ import FieldInput from '../inputs/field.input';
 import Column from '../layout/column';
 import Row from '../layout/row';
 
-function MemberConsentAuthorizationPart() {
+function MemberConsentAuthorizationPart({ isPatient = false }) {
+  const title = isPatient ? 'patient' : 'member';
+  const capitalisizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
   return (
     <Row>
       <Column
@@ -52,11 +54,11 @@ function MemberConsentAuthorizationPart() {
           }}
         >
           <Text>Relationship of the</Text>
-          <Text>representative to the member</Text>
+          <Text>representative to the {title}</Text>
         </Column>
         <Column>
           <Text>Reason for signing on</Text>
-          <Text>behalf of the member</Text>
+          <Text>behalf of the {title}</Text>
         </Column>
       </Column>
       <Column>
@@ -99,7 +101,7 @@ function MemberConsentAuthorizationPart() {
               style={{
                 marginTop: '0.02in',
               }}
-              label={'Patient is incapacitated'}
+              label={`${capitalisizedTitle} is incapacitated`}
             />
           </Row>
           <Row>
