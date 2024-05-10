@@ -3,11 +3,11 @@ import React from 'react';
 import Column from '../layout/column';
 
 const styles = StyleSheet.create({
-  fieldContainer: {
-    justifyContent: 'center',
-    alignItems: 'end',
-    width: '100%',
-  },
+  // fieldContainer: {
+  //   justifyContent: 'center',
+  //   alignItems: 'end',
+  //   width: '100%',
+  // },
   inputField: {
     height: '0.14in',
     borderBottomWidth: 0.5,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 function FieldInput({ label, description, style, width, debug }) {
   return (
-    <Column debug={debug} style={[styles.fieldContaine, style]}>
+    <Column debug={debug} style={[style]}>
       <View style={[styles.inputField, { width: width }]} />
       <Text style={styles.fieldLabel}>{label}</Text>
       {description ? (
