@@ -10,11 +10,17 @@ const styles = StyleSheet.create({
   },
 });
 
-function CheckBoxInput({ label, style }) {
+function CheckBoxInput({ label, style, debug, boxMarginRight = '0.05in' }) {
   return (
-    <Row style={style}>
-      <BoxInput number={1} style={{ marginRight: '0.05in' }} />
-      <Text style={styles.label}>{label}</Text>
+    <Row
+      style={{
+        maxHeight: 14,
+        ...style,
+      }}
+      debug={debug}
+    >
+      <BoxInput number={1} style={{ marginRight: boxMarginRight }} />
+      <Text style={[styles.label]}>{label}</Text>
     </Row>
   );
 }
