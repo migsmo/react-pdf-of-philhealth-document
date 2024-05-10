@@ -1,6 +1,6 @@
 import { Font, PDFViewer, StyleSheet } from '@react-pdf/renderer';
 import './App.css';
-import CF1 from './components/react-pdf-documents/cf-1';
+import CF2 from './components/react-pdf-documents/cf2';
 import Helvetica from './fonts/helvetica/Helvetica.ttf';
 import MinionProBold from './fonts/minion-pro/Minion-Pro-Bold.ttf';
 import MinionProItalic from './fonts/minion-pro/Minion-Pro-Italic.ttf';
@@ -53,7 +53,8 @@ Font.register({
 function App() {
   return (
     <PDFViewer style={styles.viewer}>
-      <CF1 />
+      <CF2 />
+      {/* <CF1 /> */}
     </PDFViewer>
   );
 }
