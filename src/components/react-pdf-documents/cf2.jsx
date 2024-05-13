@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import PhilHealthHeaderPart from '../document-parts/philhealth-header.part';
 import AddressInput from '../inputs/address.input';
+import BoxTextInput from '../inputs/box-text.input';
 import BoxInput from '../inputs/box.input';
 import CheckBoxInput from '../inputs/check-box.input';
 import FieldInput from '../inputs/field.input';
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
     maxHeight: '100%',
     fontFamily: 'SourceSansLight',
     fontSize: 8.64,
+    // fontSize: 7.68,
   },
 
   top_header: {
@@ -247,7 +249,7 @@ function CF2() {
           </Column>
           <SectionDivider text={'PART II - PATIENT CONFINEMENT INFORMATION'} />
           <Column style={styles.part_two_section}>
-            <Column
+            <Row
               style={{
                 borderBottom: '1.5 #000 solid',
               }}
@@ -498,8 +500,8 @@ function CF2() {
                   />
                 </Row>
               </Column>
-            </Column>
-            <Column
+            </Row>
+            <Row
               style={{
                 borderBottom: '1.5 #000 solid',
               }}
@@ -513,8 +515,8 @@ function CF2() {
               >
                 <Heading1>6. Admission Diagnosis/es: </Heading1>
               </Column>
-            </Column>
-            <Column
+            </Row>
+            <Row
               style={{
                 borderBottom: '1.5 #000 solid',
               }}
@@ -589,17 +591,13 @@ function CF2() {
                       marginRight: '0.17in',
                     }}
                   >
-                    <Text
-                      style={{
-                        marginLeft: '0.29in',
-                      }}
-                    >
+                    <Text style={{}}>
                       Related Procedure/s (if there’s any) RVS Code
                     </Text>
                     <Row>
                       <Column
                         style={{
-                          marginRight: '0.09in',
+                          marginRight: '0.05in',
                         }}
                       >
                         <Text>i.</Text>
@@ -610,13 +608,387 @@ function CF2() {
                         <Text>iii.</Text>
                       </Column>
                       <Column>
-                        <StackedLines numLines={6} />
+                        <StackedLines numLines={6} lineWidth='1.60in' />
                       </Column>
                     </Row>
                   </Column>
+                  <Column
+                    style={{
+                      marginRight: '0.17in',
+                    }}
+                  >
+                    <Text
+                      style={{
+                        alignSelf: 'center',
+                      }}
+                    >
+                      RVS Code
+                    </Text>
+                    <Column>
+                      <StackedLines numLines={6} lineWidth='0.84in' />
+                    </Column>
+                  </Column>
+                  <Column
+                    style={{
+                      marginRight: '0.21in',
+                    }}
+                  >
+                    <Text
+                      style={{
+                        alignSelf: 'center',
+                      }}
+                    >
+                      Date of Procedure
+                    </Text>
+                    <Column>
+                      <StackedLines numLines={6} lineWidth='0.88in' />
+                    </Column>
+                  </Column>
+                  <Column>
+                    <Text
+                      style={{
+                        alignSelf: 'center',
+                      }}
+                    >
+                      Laterality (check applicable box)
+                    </Text>
+                    <Column>
+                      <Row>
+                        <Column
+                          style={{
+                            marginRight: '0.10in',
+                          }}
+                        >
+                          <CheckBoxInput label='left' />
+                          <CheckBoxInput label='left' />
+                          <CheckBoxInput label='left' />
+                          <CheckBoxInput label='left' />
+                          <CheckBoxInput label='left' />
+                          <CheckBoxInput label='left' />
+                        </Column>
+                        <Column
+                          style={{
+                            marginRight: '0.10in',
+                          }}
+                        >
+                          <CheckBoxInput label='right' />
+                          <CheckBoxInput label='right' />
+                          <CheckBoxInput label='right' />
+                          <CheckBoxInput label='right' />
+                          <CheckBoxInput label='right' />
+                          <CheckBoxInput label='right' />
+                        </Column>
+                        <Column>
+                          <CheckBoxInput label='both' />
+                          <CheckBoxInput label='both' />
+                          <CheckBoxInput label='both' />
+                          <CheckBoxInput label='both' />
+                          <CheckBoxInput label='both' />
+                          <CheckBoxInput label='left' />
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Column>
                 </Row>
               </Column>
-            </Column>
+            </Row>
+            <Row
+              style={{
+                borderBottom: '1.5 #000 solid',
+              }}
+            >
+              <Column
+                style={{
+                  marginHorizontal: '0.07in',
+                  marginTop: 0,
+                }}
+              >
+                <Heading1>8. Special Considerations:</Heading1>
+              </Column>
+            </Row>
+            <Row
+              style={{
+                borderBottom: '1.5 #000 solid',
+              }}
+            >
+              <Column
+                style={{
+                  margin: '0.07in',
+                  marginRight: 0,
+                  marginTop: 0,
+                }}
+              >
+                <Row>
+                  <Text>
+                    a. For the following repetitive procedures, check box that
+                    applies and enumerate the procedure/sessions dates
+                    [mm-dd-yyyy]. For chemotherapy, see guidelines
+                  </Text>
+                </Row>
+                <Row
+                  style={{
+                    marginLeft: '0.32in',
+                  }}
+                >
+                  <Column
+                    style={{
+                      marginRight: '0.20in',
+                    }}
+                  >
+                    <CheckBoxInput label={'Hemodialysis'} />
+                    <CheckBoxInput label={'Peritoneal Dialysis'} />
+                    <CheckBoxInput label={'Radiotherapy (LINAC)'} />
+                    <CheckBoxInput label={'Radiotherapy (COBALT)'} />
+                  </Column>
+                  <Column
+                    style={{
+                      marginRight: '0.20in',
+                    }}
+                  >
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                  </Column>
+                  <Column
+                    style={{
+                      marginRight: '0.20in',
+                    }}
+                  >
+                    <CheckBoxInput label={'Blood Transfusion'} />
+                    <CheckBoxInput label={'Brachytherapy'} />
+                    <CheckBoxInput label={'Chemotherapy'} />
+                    <CheckBoxInput label={'Simple Debridement'} />
+                  </Column>
+                  <Column
+                    style={{
+                      marginRight: '0.20in',
+                    }}
+                  >
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                    <FieldInput
+                      width={'2.05in'}
+                      style={{
+                        height: '0.17in',
+                      }}
+                    />
+                  </Column>
+                </Row>
+                <Row>
+                  <Text
+                    style={{
+                      marginRight: '1.15in',
+                    }}
+                  >
+                    b. For Z-Benefit Package
+                  </Text>
+                  <Heading1 fontSize={8.64} style={{ marginRight: '0.09in' }}>
+                    Z-Benefit Package Code:
+                  </Heading1>
+                  <FieldInput width={'2.21in'} />
+                </Row>
+                <Row>
+                  <Column>
+                    <Text>
+                      c. For MCP Package (enumerate four dates [mm-dd-year] of
+                      pre-natal check-ups)
+                    </Text>
+                    <Row>
+                      <Text
+                        style={{
+                          marginLeft: '0.08in',
+                          marginRight: '0.08in',
+                        }}
+                      >
+                        1
+                      </Text>
+                      <FieldInput
+                        width={'1.80in'}
+                        style={{
+                          marginRight: '0.17in',
+                        }}
+                      />
+                      <Text
+                        style={{
+                          marginRight: '0.05in',
+                        }}
+                      >
+                        2
+                      </Text>
+                      <FieldInput
+                        width={'1.64in'}
+                        style={{
+                          marginRight: '0.10in',
+                        }}
+                      />
+                      <Text
+                        style={{
+                          marginRight: '0.04in',
+                        }}
+                      >
+                        3
+                      </Text>
+                      <FieldInput
+                        width={'1.50in'}
+                        style={{
+                          marginRight: '0.10in',
+                        }}
+                      />
+                      <Text
+                        style={{
+                          marginRight: '0.08in',
+                        }}
+                      >
+                        4
+                      </Text>
+                      <FieldInput width={'1.77in'} />
+                    </Row>
+                  </Column>
+                </Row>
+                <Row>
+                  <Text>d. For TB DOTS Package</Text>
+                  <CheckBoxInput label={'Intensive Phase'} />
+                  <CheckBoxInput label={'Maintenance Phase'} />
+                </Row>
+                <Row>
+                  <Column>
+                    <Row>
+                      <Text>
+                        e. For Animal Bite Package (write the dates [mm-dd-year]
+                        when the following doses of vaccine were given)
+                      </Text>
+                      <BoxTextInput>
+                        <Heading1 fontSize={8.64}>
+                          Note: Anti Rabies Vaccine (ARV), Rabies Immunoglobulin
+                          (RIG)
+                        </Heading1>
+                      </BoxTextInput>
+                    </Row>
+
+                    <Row>
+                      <Heading1 fontSize={8.64}>Day 0 ARV</Heading1>
+                      <FieldInput />
+                      <Heading1 fontSize={8.64}>Day 3 ARV</Heading1>
+                      <FieldInput />
+                      <Heading1 fontSize={8.64}>Day 7 ARV</Heading1>
+                      <FieldInput />
+                      <Heading1 fontSize={8.64}>RIG</Heading1>
+                      <FieldInput />
+                      <Heading1 fontSize={8.64}>Others (Specify)</Heading1>
+                      <FieldInput />
+                    </Row>
+                  </Column>
+                </Row>
+                <Row>
+                  <Column>
+                    <Row>
+                      <Text>f. For Newborn Care Package</Text>
+                      <CheckBoxInput label={'Essential Newborn Care'} />
+                      <CheckBoxInput label={'Newborn Hearing Screening Test'} />
+                      <CheckBoxInput label={'Newborn Screening Test'} />
+                      <CheckBoxInput label={'Newborn Screening Test'} />
+                    </Row>
+                    <BoxTextInput>
+                      <Row>
+                        <Heading1 fontSize={8.64}>
+                          For Essential Newborn Care
+                        </Heading1>
+                        <Text>(check applicable boxes)</Text>
+                      </Row>
+                    </BoxTextInput>
+                  </Column>
+
+                  <BoxTextInput>
+                    <Text
+                      style={{
+                        marginBottom: '0.09',
+                      }}
+                    >
+                      For Newborn Screening
+                    </Text>
+                    <Text>please attach NBS Filter Sticker here</Text>
+                  </BoxTextInput>
+                </Row>
+                <Row>
+                  <Column>
+                    <CheckBoxInput label={'Immediate drying of newborn'} />
+                    <CheckBoxInput label={'Early skin-to-skin contact'} />
+                  </Column>
+                  <Column>
+                    <CheckBoxInput label={'Timely cord clamping'} />
+                    <CheckBoxInput label={'Eye Prophylaxis'} />
+                  </Column>
+                  <Column>
+                    <CheckBoxInput label={'Weighing of the newborn'} />
+                    <CheckBoxInput label={'Vitamin K administration'} />
+                  </Column>
+                  <Column>
+                    <Row>
+                      <CheckBoxInput label={'BCG vaccination'} />
+                      <CheckBoxInput label={'Hepatitis B vaccination'} />
+                    </Row>
+                    <CheckBoxInput
+                      label={
+                        'Non-separation of mother/baby for early breastfeeding initiation'
+                      }
+                    />
+                  </Column>
+                </Row>
+                <Row>
+                  <Text>g. For Outpatient HIV/AIDS Treatment Package</Text>
+                  <Heading1 fontSize={8.64}>Laboratory Number:</Heading1>
+                  <FieldInput />
+                </Row>
+              </Column>
+            </Row>
+            <Row>
+              <Column>
+                <Heading1>9. PhilHealth Benefits:</Heading1>
+                <Row>
+                  <Heading1 fontSize={8.64}>ICD 10 or RVS Code:</Heading1>
+                  <Text>a. First Case Rate</Text>
+                  <FieldInput /> <Text>2. Second Case Rate</Text>
+                  <FieldInput />
+                </Row>
+              </Column>
+            </Row>
           </Column>
         </Column>
       </Page>
